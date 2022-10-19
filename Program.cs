@@ -36,5 +36,22 @@ namespace QuickSort
                 arr[i] = Int32.Parse(s1);
             }
         }
+        //swaps the elements at index x with the elements at index v
+
+        void swap(int x, int y)
+        {
+            int temp;
+
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+
+        public void q_Sort(int low, int high)
+        {
+            int pivot, i, j;
+            if (low > high)
+                return;
+
     }
 }

@@ -56,14 +56,35 @@ namespace QuickSort
             //One containing elements less that or equal to pivot
             //Outher containing elements greather than pivot
 
-            i = low + i;
+            i = low + 1;
             j = high;
 
-            pivot arr[low];
+            pivot = arr[low];
             while (i <= j)
-            { 
-                
+            {
+                //Search for an elements grater than pivot
+                while ((arr[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //Search for an elements less than or equal to pivot
+                while ((arr[j] > pivot) && (j >= low))
+                {
+                    j--;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                if (i < j)
+                {
+
+                }//if the greater element is on the left of the element
+            }
         }
 
     }
 }
+
